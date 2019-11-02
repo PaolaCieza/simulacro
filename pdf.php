@@ -1,22 +1,19 @@
 <?php
 define('FPDF_FONTPATH','font/');
-require_once "fpdf.php";
+require_once ("fpdf.php");
 
 require_once "php/conexion.php";
 
 session_start();
 $dni=$_SESSION['codigo'];
-$sql="select * from usuario where codigo = $codigo";
+$sql="select * from usuario where codigo ='$dni' ";
 
 $result = $cnx->query($sql);
 
 $pdf=new FPDF();
-
-$pdf->AddPage(); 
-
+$pdf->AddPage();
 $pdf->SetFont('Arial','B',16);
 $pdf->Cell(180,10,'CARNET DE ASISTENCIA',0,1,'C');
-$pdf->Ln();
 $pdf->Ln();
 $pdf->SetFont('Arial','B',12);
 $pdf->Cell(100,100,"Foto",1);
@@ -31,7 +28,7 @@ $pdf->Ln();
 $pdf->SetFont('Arial','I',10);
 while($registro=$result->fetchObject())
 {
-    $pdf->Cell(100,50,$pdf->Image($registro->imagen, $pdf->GetX(), $pdf->GetY(),50),0);
+    $pdf->Cell(40,5,$pdf->Image('imagenes/'.$registro->imagen, $pdf->GetX(), $pdf->GetY(),50),0);
     $pdf->Cell(40,5,$registro->codigo,0);
 	$pdf->Cell(40,5,$registro->nombres,0);
 	$pdf->Cell(40,5,$registro->apepaterno,0);

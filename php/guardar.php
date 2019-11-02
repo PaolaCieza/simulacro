@@ -1,7 +1,6 @@
 <?php
 require_once("conexion.php");
 if(!empty($_POST)){
-    session_start();
     $facultad = $_POST['facultad'];
     $escuela = $_POST['escuela'];
     $universidad = $_POST['universidad'];
