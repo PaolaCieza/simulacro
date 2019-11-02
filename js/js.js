@@ -22,7 +22,7 @@ function guardar() {
 			console.log(data);
 			if (data == 1) {
 				window.location.replace(
-					"http://localhost/simulacro_cieza/html/pedir_pdf.html"
+					"http://localhost/simulacro_practica3/html/pedir_pdf.html"
 				);
 			} else {
 				alert("No se pudo registrar");

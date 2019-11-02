@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-11-2019 a las 03:29:54
+-- Tiempo de generación: 02-11-2019 a las 04:27:12
 -- Versión del servidor: 10.3.15-MariaDB
 -- Versión de PHP: 7.3.6
 
@@ -40,6 +40,12 @@ CREATE TABLE `usuario` (
   `imagen` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`cod_registro`, `facultad`, `escuela`, `universidad`, `codigo`, `nombres`, `apepaterno`, `apematerno`, `imagen`) VALUES
+(14, 'Ingenieria', 'Sistemas', 'Usat', '171CV70528', 'Paola', 'Cieza', 'Bances', 'img_56d8edad9bb9fc571b2b78b321d96e85.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -59,7 +65,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `cod_registro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `cod_registro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
