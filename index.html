@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/js.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="container border border-dark mt-5 form-group" method="post" action="php/guardar.php" enctype="multipart/form-data" id="frmEnvio">
+        <div class="mt-5 mb-3  text-warning">
+            <h1>
+                REGISTRATE PARA TU CARNET DE ASISTENTE
+            </h1>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="txtfacultad">FACULTAD</label>
+                <input type="text"  class="form-control" id="txtfacultad" name="txtfacultad" placeholder="FACULTAD">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="txtescuela">ESCUELA</label>
+                <input type="text" class="form-control" id="txtescuela" name="txtescuela" placeholder="ESCUELA">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label for="txtuniversidad">UNIVERSIDAD</label>
+                <input type="text" class="form-control" id="txtuniversidad" name="txtuniversidad"
+                    placeholder="UNIVERSIDAD EJ:USAT">
+            </div>
+            <div class="form-group col-md-4">
+                    <label for="txtcodigo">CÓDIGO UNIVERSITARIO</label>
+                    <input type="text" class="form-control" id="txtcodigo" name="txtcodigo"
+                        placeholder="CÓDIGO">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="txtnombre">NOMBRES</label>
+                <input type="text" class="form-control" name="txtnombre" id="txtnombre" placeholder="NOMBRES">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="txtapellidopaterno">APELLIDO PATERNO</label>
+                <input type="text" class="form-control" name="txtapellidopaterno" id="txtapellidopaterno"
+                    placeholder="APELLIDO PATERNO">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="txtapellidomaterno">APELLIDO MATERNO</label>
+                <input type="text" class="form-control" name="txtapellidomaterno" id="txtapellidomaterno"
+                    placeholder="APELLIDO MATERNO">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="imagen">ADJUNTAR FOTO</label>
+            <input type="file" class="form-control" id="imagen" name="imagen">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="guardar()" >Guardar</button>
+    </form>
+</body>
+
+</html>
